@@ -1,4 +1,4 @@
 flask
 pandas
-guvicorn
+gunicorn
 openpyxl
