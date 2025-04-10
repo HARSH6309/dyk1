@@ -78,10 +78,9 @@ def get_dyk_entries():
     if __name__ == '__main__':
     # For local development
     app.run(debug=True)
-else:
+    else:
     # For production with Gunicorn
     # The app variable will be used by Gunicorn
     # No code needed here, Gunicorn will use the 'app' instance
     pass
-
 
