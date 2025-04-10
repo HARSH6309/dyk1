@@ -15,8 +15,6 @@ def get_dyk_entries():
         # Change this line in your app.py
         file_path = os.path.join(os.path.dirname(__file__), 'New-API.xlsx')
 
-
-        
         if not os.path.exists(file_path):
             return jsonify({'message': 'Excel file not found'}), 404
             
@@ -74,13 +72,11 @@ def get_dyk_entries():
     except Exception as e:
         return jsonify({'message': 'API Failed', 'error': str(e)}), 400
 
-
-    if __name__ == '__main__':
+if __name__ == '__main__':
     # For local development
     app.run(debug=True)
-    else:
+else:
     # For production with Gunicorn
     # The app variable will be used by Gunicorn
     # No code needed here, Gunicorn will use the 'app' instance
     pass
-
