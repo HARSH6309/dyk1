@@ -12,7 +12,8 @@ def get_dyk_entries():
         date_param = request.args.get('date')
         
         # Path to the Excel file
-        file_path = 'Link API.xlsx'
+        file_path = os.path.join(os.path.dirname(__file__), 'static', 'New-API.xlsx')
+
         
         if not os.path.exists(file_path):
             return jsonify({'message': 'Excel file not found'}), 404
